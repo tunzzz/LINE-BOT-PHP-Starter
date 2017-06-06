@@ -28,7 +28,7 @@ $curl_response = curl_exec($curl);
 //    die('error occured during curl exec. Additioanl info: ' . var_export($info));
 //}
 //curl_close($curl);
-//$decoded = json_decode($curl_response);
+$decoded = json_decode($curl_response);
 //if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
 //    die('error occured: ' . $decoded->response->errormessage);
 //}
@@ -38,7 +38,7 @@ $curl_response = curl_exec($curl);
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $curl_response['workers']
+				'text' => $decoded['workers']
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
