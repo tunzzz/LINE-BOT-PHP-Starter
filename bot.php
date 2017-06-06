@@ -17,7 +17,7 @@ if (!is_null($events['events'])) {
 			$replyToken = $event['replyToken'];
 			
 			//test api
-			$service_url = 'https://api.nicehash.com/api?method=stats.provider&addr=1FWYJ7W7wj8EaaMBtUo8dzJ3EvSX2wU1dE';
+			$service_url = 'https://api.nicehash.com/api?method=stats.provider.workers&addr=1FWYJ7W7wj8EaaMBtUo8dzJ3EvSX2wU1dE&algo=24';
       //next example will recieve all messages for specific conversation
 $curl = curl_init($service_url);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
